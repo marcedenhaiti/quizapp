@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".Activity.Instruction">
+
+    <!--Toolbar-->
+    <include layout="@layout/toolbar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--Title-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="8dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtAppname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/public_round_bold"
+                    android:gravity="center_vertical"
+                    android:text="@string/app_name"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/inner_toolbar" />
+
+            </LinearLayout>
+
+            <!--Ad view-->
+            <LinearLayout
+                android:id="@+id/lyAdView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ly_middle"
+                android:layout_margin="15dp"
+                android:orientation="horizontal"
+                android:visibility="gone" />
+
+            <!--Description-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="8dp"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/txtPolicyDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/public_medium"
+                    android:gravity="center"
+                    android:lineSpacingExtra="5dp"
+                    android:textColor="@color/text_gray"
+                    android:textSize="@dimen/default_text_15" />
+
+            </LinearLayout>
+
+            <!-- Template View for native ad -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <!--  This is your template view -->
+                <com.google.android.ads.nativetemplates.TemplateView
+                    android:id="@+id/nativeTemplate"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:gnt_template_type="@layout/gnt_medium_template_view" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

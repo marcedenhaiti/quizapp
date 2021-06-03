@@ -1,0 +1,284 @@
+<resources>
+    <string name="app_name">Jeni</string>
+    <string name="toolbar_title">Jeni</string>
+
+    <!--Facebook-->
+    <string name="facebook_app_id">214306917169386</string>
+    <string name="fb_login_protocol_scheme">fb214306917169386</string>
+
+    <!--Gmail-->
+    <string name="web_client_id">510196953221-e80ojmrb2eficl8h9ee4mnqcom5lsd7o.apps.googleusercontent.com</string>
+    <string name="Secrate">lkA7T8rWgpML9dDNvriMKPGv</string>
+
+
+    <!--Main Activity-->
+    <string name="featured_nav">Featured</string>
+    <string name="search_nav">Rechercher</string>
+    <string name="my_courses_nav">Mes cours</string>
+    <string name="wishlist_nav">Wishlist</string>
+    <string name="account_nav">compte</string>
+    <string name="Play_Quiz">Jouer maintenant</string>
+    <string name="Leaderboard">Classement</string>
+    <string name="Instruction">Instructions</string>
+    <string name="User_Profile">Mon Profil</string>
+    <string name="hello">Hello,</string>
+    <string name="retraitx">Retrait</string>
+    <string name="Settings">Parametres</string>
+
+    <!--Network and Permission-->
+    <string name="permission_desc">Nous avons besoin de votre permission, pour continuer</string>
+    <string name="permission_title">Tout est prèt</string>
+    <string name="isRTL">Faux</string>
+
+    <string name="internet_error">Probleme de réseau</string>
+    <string name="permission_necessary">Permission nécessaire</string>
+    <string name="storage_permission_is_necessary_to_wrote_event">Storage permission is necessary to read and write event</string>
+
+
+    <string name="categories">Categories</string>
+    <string name="language">Langue</string>
+    <string name="top_courses_design">Top Courses in Design</string>
+    <string name="featured_course">Featured Courses</string>
+    <string name="courses_to_get_you_started">Courses to get you started</string>
+    <string name="subcategory">Sub Categories</string>
+    <string name="popular_topic">Popular Topic</string>
+    <string name="top_instructor">Top Instructor</string>
+    <string name="all_courses">All Courses</string>
+    <string name="wishlist_course">Wishlist</string>
+
+    <!--Course details START-->
+    <string name="this_course_include">This Course Includes</string>
+    <string name="what_you_will_learn">What you\'ll learn</string>
+    <string name="description">Description</string>
+    <string name="requirements">Requirements</string>
+    <string name="students_also_viewed">Students also viewed</string>
+    <string name="students_feedback">Student Feedback</string>
+    <string name="course_rating">Course Rating</string>
+    <string name="course_content">Course Content</string>
+    <string name="created_by">Created By</string>
+    <string name="preview_this_course">Preview This Course</string>
+    <string name="buy_now">BUY NOW</string>
+    <string name="total_hours">Total Hours</string>
+    <string name="updated">Updated</string>
+    <string name="add_to_cart">ADD TO CART</string>
+    <string name="add_to_wishlist">ADD TO WISHLIST</string>
+    <string name="curriculum">Curriculum</string>
+    <string name="get_started">Get Started</string>
+    <!--Course details END-->
+
+    <!--Login, Register & OTP verification details START-->
+    <string name="login">Connexion</string>
+    <string name="email">Email</string>
+    <string name="email_address">Adresse mail</string>
+    <string name="email_address_with_star">Email ID *</string>
+    <string name="password">Mot de passe *</string>
+    <string name="userName">Nom utiliisateur *</string>
+    <string name="phone_number">Téléphone *</string>
+    <string name="forgot_password">Mot de passe oublié ?</string>
+    <string name="sign_in">Se connecter</string>
+    <string name="sign_up">Inscription</string>
+    <string name="already_have_an_account">Vous avez deja un compte ?</string>
+    <string name="do_not_have_an_account">Vous n\'avez pas de compte ?</string>
+    <string name="or_Login_using_Social_Media">Ou connectez vous avec Gmail</string>
+    <string name="register">Inscription</string>
+    <string name="register_now">S\'inscrire maintenant</string>
+    <string name="sign_in_with_mobile_no">Sign in With Mobile no</string>
+    <string name="google">Google</string>
+    <string name="facebook">Facebook</string>
+    <string name="full_name">Full Name</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="forgot_password_title">Forgot Password</string>
+    <string name="new_password_have_been_send_to_register_email_address">New password have been send to register email address</string>
+    <string name="mobile_no">Mobile No</string>
+    <string name="otp_verification">OTP Verification</string>
+    <string name="enter_your_mobile_no">Enter Your Mobile No</string>
+    <string name="you_will_receive_a_4_digit_code_to_verify_next">You will receive a 4 digit code to \n verify next</string>
+    <string name="send_otp">SEND OTP</string>
+    <string name="enter_otp_code_to_sent_to_mobile_no">Enter OTP code to sent \n to Mobile No</string>
+    <string name="verify_and_proceed">VERIFY &amp; PROCEED</string>
+    <!--Login, Register & OTP verification details END-->
+
+    <!--Question and Level START-->
+    <string name="answer_it">Répondre</string>
+    <string name="play_next_level">Niveau suivant</string>
+    <string name="Share_result">Partager mes résultats</string>
+    <string name="Statistics">Statistiques</string>
+    <string name="leaderboard">Classement</string>
+    <string name="Rank_of_medal">Rank of Medal</string>
+    <string name="Recent_quiz">Quiz récents</string>
+    <string name="next">Suivant</string>
+    <string name="total_score">Score final</string>
+    <string name="finish">Fini</string>
+    <string name="category_welcome">Bienvenue, choisissez une catégorie jouez et gagnez jusqu\'a $USD 100 aujourd\'hui</string>
+    <string name="incorrect_answers">Mauvaises réponses</string>
+    <string name="correct_answers">Bonnes réponses</string>
+    <string name="attended_questions">Questions répondues</string>
+    <string name="correct_answer_status">Bien jouer! votre réponse est correcte</string>
+    <string name="wrong_answer_status">Oops! mauvaise réponse.</string>
+    <string name="time_over_status">Le temps a écoulé, vous ne pouvez plus répondre.</string>
+    <string name="rank">Rang</string>
+    <string name="coins">Coins</string>
+    <string name="score">Score</string>
+    <!--Question and Level END-->
+
+    <!--Tutor Profile START-->
+    <string name="About">A porpos</string>
+    <string name="Term_and_conditions">Termes &amp; Conditions</string>
+    <string name="Privacy_policy">Politique de confidentialiité</string>
+    <string name="Help_Center">Centre d\'aider</string>
+    <string name="Enable_Sound">Activer le son</string>
+    <string name="Enable_Vibration">Activer Vibration</string>
+    <string name="Qr_code_scan">Scan QRCode</string>
+    <string name="Report_issues">Report Issues</string>
+    <string name="Logout">Deconnexion</string>
+    <string name="Login">Connexion</string>
+    <string name="Company">Compagnie</string>
+    <!--Tutor Profile END-->
+
+    <!--Cart START-->
+    <string name="apply_code">APPLY CODE</string>
+    <string name="enter_code">ENTER CODE</string>
+    <string name="cart">Cart</string>
+    <string name="coupon_code">Coupon Code</string>
+    <string name="checkout">Checkout</string>
+    <string name="total_amount">Total Amount</string>
+    <string name="discount_if_you_apply_coupon_code">Discount if you apply coupon code.</string>
+    <string name="discount">Discount</string>
+    <string name="add_coupon_code">Add Coupon Code</string>
+    <string name="enter_coupon_code_to">Enter Coupon Code here</string>
+    <string name="done">Done</string>
+    <string name="your_coupon_code">Your coupon code</string>
+    <!--Cart END-->
+
+    <!--Payment Activity START-->
+    <string name="payment_methods">Moyens de paiement</string>
+    <string name="choose_a_payment_methods_to_pay">Choisir un moyen de paiement</string>
+    <string name="pay_with">Payer avec</string>
+    <string name="Continue">Continuer</string>
+    <string name="paypal">PayPal</string>
+    <string name="razorpay">RazorPay</string>
+    <string name="paytm">Paytm</string>
+    <string name="upi">UPI</string>
+    <string name="flutterwave">Flutterwave</string>
+    <string name="payumoney">PayUMoney</string>
+    <!--Payment Activity END-->
+
+    <!--Search START-->
+    <string name="search_all_course">Search all course</string>
+    <string name="top_searches">Top searches</string>
+    <string name="browse_categories">Browse categories</string>
+    <!--Search END-->
+
+    <!-- youtube START -->
+    <string name="youtube_api_key">AIzaSyAaJX_VFOEO48pVL-YidlEaJgRp9EmDaAw</string>
+    <string name="error_player">There was an error initializing the YouTubePlayer (%1$s)</string>
+    <string name="loading_video">Loading video</string>
+    <!-- youtube END -->
+
+    <!-- Account Fragment START -->
+    <string name="app_language">App Language</string>
+    <string name="push_notification">Push Notification</string>
+    <string name="rate_app">Rate App</string>
+    <string name="share">Share</string>
+    <string name="about_app">A propos de l\'application</string>
+    <string name="privacy">Privacy</string>
+    <string name="profile">Profile</string>
+    <string name="logout">Logout</string>
+    <string name="log_in">Login</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="company">Developpeur</string>
+    <string name="contact">Contact</string>
+    <string name="website">Site web</string>
+    <!-- Account Fragment END -->
+
+    <string name="add_course_to_favourite">Add course to Favourite</string>
+    <string name="archive_this_course">Archive this Course</string>
+    <string name="announcement">Announcement</string>
+    <string name="resources">Resources</string>
+    <string name="notes">Notes</string>
+    <string name="share_this_course">Share this Course</string>
+    <string name="about_this_course">About this Course</string>
+    <string name="home">Home</string>
+
+    <!--Withdrawal-->
+    <string name="Withdrawal">Retrait</string>
+    <string name="withdraw_request">Demande de retrait</string>
+    <string name="points">Points</string>
+    <string name="pending">En attente</string>
+    <string name="completed">Effectué</string>
+    <string name="amount">USD</string>
+    <string name="withdraw_request_warning">Désolé, vous n\'avez pas assez de points pour la demande de retrait.</string>
+    <string name="withdrawal_history">Historique des retraits</string>
+    <string name="minimum">Un minimum de</string>
+    <string name="minimum_points_required">points est requis pour faire une demande de retrait.</string>
+    <string name="select_payment_type">Selectionner un mode de paiement pour retirer vos gains.</string>
+    <string name="paytm_withdraw"> Mon Cash</string>
+    <string name="paypal_withdraw"> Western Union</string>
+    <string name="wiretransfer_bank_details">Virement bancaire</string>
+    <string name="enter_payment_details">Entrer les détails relatifs au mode de paiement choisi \n *1- Mon Cash > Nom Complet - Numéro de téléphone \n *2- Western Union > Nom - Prénom - Adresse - Numéro de \n *3- Virement bancaire > Nom complet - Nom de la banque - Numero du compte. \n NB: Veuillez bien verifier vos informations avant de les envoyer </string>
+    <string name="submit">Envoyer</string>
+
+    <string name="viewAll">View All</string>
+    <string name="see_all">SEE ALL</string>
+    <string name="see_more_reviews">SEE MORE REVIEWS</string>
+    <string name="show_more">SHOW MORE</string>
+    <string name="show_less">SHOW LESS</string>
+    <string name="view_profile">VIEW PROFILE</string>
+    <string name="bestseller">BESTSELLER</string>
+    <string name="cancel">Cancel</string>
+    <string name="update">Update</string>
+    <string name="Submit">SUBMIT</string>
+
+    <string name="reset">RESET</string>
+    <string name="apply">APPLY</string>
+
+    <string name="price">Price</string>
+    <string name="level">Niveau</string>
+    <string name="duration">Duration</string>
+    <string name="features">Features</string>
+    <string name="preview">Preview</string>
+
+    <string name="welcome_slides">Home Screen</string>
+    <string name="skip">Skip</string>
+    <string name="start">Get START</string>
+
+    <string-array name="course_array">
+        <item>All courses</item>
+        <item>Favourite courses</item>
+        <item>Archived courses</item>
+        <item>Downloaded courses</item>
+    </string-array>
+
+    <string name="slide_1_title">Online Quiz</string>
+    <string name="slide_1_desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s.</string>
+
+    <string name="slide_2_title">Win prizes</string>
+    <string name="slide_2_desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s.</string>
+
+    <string name="welcome_to_learning_app">Welcome to Quiz App</string>
+    <string name="Lorem_Ipsum">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        Lorem Ipsum has been the industry standard dummy text ever since the 1500s.</string>
+
+    <string name="Lorem_Ipsum_more">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        Lorem Ipsum has been the industry standard dummy text ever since the 1500s.
+        Contrary to popular belief, Lorem Ipsum is not simply random text.
+
+        It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+        Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
+        Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC.
+        This book is a treatise on the theory of ethics, very popular during the Renaissance.
+        The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+
+        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.
+        Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+        Contrary to popular belief, Lorem Ipsum is not simply random text.
+
+        It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+        Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
+        Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC.
+        This book is a treatise on the theory of ethics, very popular during the Renaissance.
+        The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+
+        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. </string>
+
+</resources>

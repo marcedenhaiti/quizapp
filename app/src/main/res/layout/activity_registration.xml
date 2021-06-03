@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rounded_gradient_bg4"
+    tools:context=".Activity.Registration">
+
+    <!--Details-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <!--Title-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.33"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="130dp"
+                android:background="@drawable/app_icon" />
+
+        </LinearLayout>
+
+        <!--Login Details & Sign in button-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_weight="0.6"
+            android:orientation="vertical">
+
+            <!--Login Details-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="8dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <!--Registration details-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.78"
+                    android:orientation="vertical">
+
+                    <!--UserName-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_gravity="start"
+                        android:fontFamily="@font/public_medium"
+                        android:gravity="center_vertical"
+                        android:text="@string/userName"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/default_texts" />
+
+                    <LinearLayout
+                        android:id="@+id/ly_username"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal"
+                        android:weightSum="1.0">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.88">
+
+                            <EditText
+                                android:id="@+id/etUsername"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#52355065"
+                                android:fontFamily="@font/public_medium"
+                                android:imeOptions="actionNext"
+                                android:inputType="textPersonName"
+                                android:singleLine="true"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/lrm_email_pass_no" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:background="#52355065"
+                            android:layout_weight="0.12"
+                            android:gravity="center|end"
+                            android:theme="@style/AppTheme.MyRipple">
+
+                            <TextView
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="12dp"
+                                android:background="@drawable/ic_username"
+                                android:gravity="center" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.4dp"
+                        android:background="@color/Gray" />
+
+                    <!--Email Address-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_gravity="start"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/public_medium"
+                        android:gravity="center_vertical"
+                        android:text="@string/email_address_with_star"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/default_texts" />
+
+                    <LinearLayout
+                        android:id="@+id/ly_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal"
+                        android:weightSum="1.0">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.88">
+
+                            <EditText
+                                android:id="@+id/etEmail"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#52355065"
+                                android:fontFamily="@font/public_medium"
+                                android:imeOptions="actionNext"
+                                android:inputType="textEmailAddress"
+                                android:singleLine="true"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/default_texts" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:background="#52355065"
+                            android:layout_weight="0.12"
+                            android:gravity="center|end">
+
+                            <TextView
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                android:layout_marginRight="12dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/ic_email"
+                                android:gravity="center" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.4dp"
+                        android:background="@color/Gray" />
+
+                    <!--Password-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_gravity="start"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/public_medium"
+                        android:gravity="center_vertical"
+                        android:text="@string/password"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/default_texts" />
+
+                    <LinearLayout
+                        android:id="@+id/ly_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal"
+                        android:weightSum="1.0">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.88">
+
+                            <EditText
+                                android:id="@+id/etPassword"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#52355065"
+                                android:fontFamily="@font/public_medium"
+                                android:imeOptions="actionNext"
+                                android:inputType="textPassword"
+                                android:singleLine="true"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/lrm_email_pass_no" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lyPassVisibility"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:background="#52355065"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.12"
+                            android:gravity="center|end"
+                            android:theme="@style/AppTheme.MyRipple">
+
+                            <TextView
+                                android:id="@+id/ivPassVisible"
+                                android:layout_width="22dp"
+                                android:layout_height="22dp"
+                                android:layout_marginRight="12dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/ic_pass_visible"
+                                android:gravity="center" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.4dp"
+                        android:background="@color/Gray" />
+
+                    <!--Phone Number-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_gravity="start"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/public_medium"
+                        android:gravity="center_vertical"
+                        android:text="@string/phone_number"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/default_texts" />
+
+                    <LinearLayout
+                        android:id="@+id/ly_phone_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal"
+                        android:weightSum="1.0">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.88">
+
+                            <EditText
+                                android:id="@+id/etPhoneNumber"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#52355065"
+                                android:fontFamily="@font/public_medium"
+                                android:imeOptions="actionDone"
+                                android:inputType="phone"
+                                android:singleLine="true"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/lrm_email_pass_no" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:background="#52355065"
+                            android:layout_weight="0.12"
+                            android:gravity="center|end"
+                            android:theme="@style/AppTheme.MyRipple">
+
+                            <TextView
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="12dp"
+                                android:background="@drawable/ic_phone"
+                                android:gravity="center" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.4dp"
+                        android:background="@color/Gray" />
+
+                </LinearLayout>
+
+                <!--Register-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.22"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/txtRegister"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/answer_it_gradient_bg"
+                        android:fontFamily="@font/public_medium"
+                        android:gravity="center"
+                        android:text="@string/register"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/cd_topic"
+                        android:theme="@style/AppTheme.MyRipple" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--Don't have an Account? Login-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.07"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/public_medium"
+                android:gravity="center"
+                android:text="@string/already_have_an_account"
+                android:textColor="@color/white"
+                android:textSize="@dimen/lrm_email_pass_no" />
+
+            <TextView
+                android:id="@+id/txtLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/public_round_bold"
+                android:gravity="center"
+                android:text="@string/login"
+                android:textColor="@color/white"
+                android:textSize="@dimen/lrm_email_pass_no"
+                android:theme="@style/AppTheme.MyRipple" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

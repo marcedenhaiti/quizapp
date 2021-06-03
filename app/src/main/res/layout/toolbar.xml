@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!--Toolbar-->
+    <LinearLayout
+        android:id="@+id/lyToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:weightSum="1">
+
+        <!--Back-->
+        <LinearLayout
+            android:id="@+id/lyBack"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.12"
+            android:gravity="center"
+            android:theme="@style/AppTheme.MyRipple">
+
+            <TextView
+                android:id="@+id/txtBack"
+                android:layout_width="17dp"
+                android:layout_height="18dp"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_back"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+        <!--Title-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.76"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/txtToolbarTitle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/public_round_bold"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/cd_topic"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+        <!--space-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.12"
+            android:gravity="center"
+            android:visibility="invisible" />
+
+    </LinearLayout>
+
+</LinearLayout>

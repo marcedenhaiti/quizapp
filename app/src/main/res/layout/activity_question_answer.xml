@@ -1,0 +1,669 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:shimmer="http://schemas.android.com/tools"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rounded_gradient_bg3"
+    android:orientation="vertical"
+    tools:context=".Activity.QuestionAnswer">
+
+    <!--Shimmer-->
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:shimmer_duration="1200">
+
+        <!-- Adding 3 rows of placeholders -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/shim_question_answer" />
+
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--Main-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/lyBottom"
+            android:background="@drawable/foreg"
+            android:orientation="vertical">
+
+            <!--Toolbar-->
+            <include layout="@layout/toolbar" />
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginBottom="12dp"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <!--Timer & Question number-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:orientation="horizontal">
+
+                                <!--Timer-->
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="27dp"
+                                        android:background="@drawable/round_bg_primary"
+                                        android:fontFamily="@font/public_round_bold"
+                                        android:gravity="center"
+                                        android:minWidth="80dp"
+                                        android:text="00 : 10"
+                                        android:textColor="@color/blue"
+                                        android:textSize="@dimen/default_texts"
+                                        android:visibility="gone" />
+
+                                </LinearLayout>
+
+                                <!--Question number-->
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <!--Question-->
+                            <LinearLayout
+                                android:id="@+id/card_bottom"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="40dp"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <!--Total Answer right and wrong Counts-->
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="40dp"
+                                        android:layout_marginStart="12dp"
+                                        android:layout_marginTop="12dp"
+                                        android:layout_marginEnd="12dp"
+                                        android:orientation="vertical">
+
+                                        <!--Right-->
+                                        <TextView
+                                            android:id="@+id/txtRightAnswers"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:fontFamily="@font/public_medium"
+                                            android:gravity="center|top"
+                                            android:textColor="@color/white"
+                                            android:textSize="@dimen/default_texts" />
+
+                                        <!--Wrong-->
+                                        <TextView
+                                            android:id="@+id/txtWrongAnswers"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_alignParentEnd="true"
+                                            android:fontFamily="@font/public_medium"
+                                            android:gravity="center|top"
+                                            android:textColor="@color/white"
+                                            android:textSize="@dimen/default_texts" />
+
+                                    </RelativeLayout>
+
+                                    <!--Question and Progressbar-->
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="13dp"
+                                        android:layout_marginEnd="13dp"
+                                        android:layout_marginBottom="12dp"
+                                        android:minHeight="145dp"
+                                        android:orientation="horizontal">
+
+                                        <!--Right progress-->
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="0.5"
+                                            android:orientation="horizontal"/>
+
+                                        <!--Question-->
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="9"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
+                                            <ImageView
+                                                android:id="@+id/ivQuestion"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="140dp"
+                                                android:scaleType="fitXY"
+                                                android:visibility="gone" />
+
+                                            <TextView
+                                                android:id="@+id/txtQuestion"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:layout_marginTop="48dp"
+                                                android:fontFamily="@font/held_ftv_black"
+                                                android:gravity="center"
+                                                android:lineSpacingExtra="3dp"
+                                                android:singleLine="false"
+                                                android:textColor="@color/white"
+                                                android:textSize="24dp" />
+
+                                        </LinearLayout>
+
+                                        <!--Left progress-->
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="0.5"
+                                            android:gravity="end"
+                                            android:orientation="horizontal"/>
+
+                                    </LinearLayout>
+
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="15dp" />
+
+                                    <!--Question Options-->
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="12dp"
+                                        android:layout_marginEnd="12dp"
+                                        android:orientation="vertical">
+
+                                        <!--Option A-->
+                                        <LinearLayout
+                                            android:id="@+id/lyOptionA"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginBottom="10dp"
+                                            android:background="@drawable/round_bg_light_primary"
+                                            android:gravity="center"
+                                            android:minHeight="45dp"
+                                            android:orientation="horizontal">
+
+                                            <LinearLayout
+                                                android:layout_width="0dp"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight="0.15"
+                                                android:gravity="center"
+                                                android:orientation="horizontal">
+
+                                                <TextView
+                                                    android:id="@+id/txtA"
+                                                    android:layout_width="30dp"
+                                                    android:layout_height="30dp"
+                                                    android:fontFamily="@font/public_medium"
+                                                    android:gravity="center"
+
+                                                    android:background="@drawable/aq"
+                                                    android:textColor="@color/text_color_primary"
+                                                    android:textSize="@dimen/default_text_13" />
+
+                                            </LinearLayout>
+
+                                            <LinearLayout
+                                                android:layout_width="0dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight="0.65"
+                                                android:gravity="center"
+                                                android:orientation="horizontal">
+
+                                                <TextView
+                                                    android:id="@+id/txtOptionA"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginTop="3dp"
+                                                    android:layout_marginBottom="3dp"
+                                                    android:fontFamily="@font/held_regular"
+                                                    android:gravity="center_vertical"
+                                                    android:textColor="@color/text_color_primary"
+                                                    android:textSize="17dp" />
+
+                                            </LinearLayout>
+
+                                            <LinearLayout
+                                                android:layout_width="0dp"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight="0.2"
+                                                android:gravity="center"
+                                                android:orientation="horizontal">
+
+                                                <TextView
+                                                    android:id="@+id/txtTickA"
+                                                    android:layout_width="20dp"
+                                                    android:layout_height="20dp"
+                                                    android:background="@drawable/round_bor_options" />
+
+                                            </LinearLayout>
+
+                                        </LinearLayout>
+
+                                        <!--Option B-->
+                                        <LinearLayout
+                                            android:id="@+id/lyOptionB"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginBottom="10dp"
+                                            android:background="@drawable/round_bg_light_primary"
+                                            android:gravity="center"
+                                            android:minHeight="45dp"
+                                            android:orientation="horizontal">
+
+                                            <LinearLayout
+                                                android:layout_width="0dp"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight="0.15"
+                                                android:gravity="center"
+                                                android:orientation="horizontal">
+
+                                                <TextView
+                                                    android:id="@+id/txtB"
+                                                    android:layout_width="30dp"
+                                                    android:layout_height="30dp"
+                                                    android:fontFamily="@font/public_medium"
+                                                    android:gravity="center"
+                                                    android:background="@drawable/bq"
+                                                    android:textColor="@color/text_color_primary"
+                                                    android:textSize="@dimen/default_text_13" />
+
+                                            </LinearLayout>
+
+                                            <LinearLayout
+                                                android:layout_width="0dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight="0.65"
+                                                android:orientation="horizontal">
+
+                                                <TextView
+                                                    android:id="@+id/txtOptionB"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginTop="3dp"
+                                                    android:layout_marginBottom="3dp"
+                                                    android:fontFamily="@font/public_medium"
+                                                    android:gravity="center_vertical"
+                                                    android:textColor="@color/text_color_primary"
+                                                    android:textSize="@dimen/default_text_15" />
+
+                                            </LinearLayout>
+
+                                            <LinearLayout
+                                                android:layout_width="0dp"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight="0.2"
+                                                android:gravity="center"
+                                                android:orientation="horizontal">
+
+                                                <TextView
+                                                    android:id="@+id/txtTickB"
+                                                    android:layout_width="20dp"
+                                                    android:layout_height="20dp"
+                                                    android:background="@drawable/round_bor_options" />
+
+                                            </LinearLayout>
+
+                                        </LinearLayout>
+
+                                        <!--Option C-->
+                                        <LinearLayout
+                                            android:id="@+id/lyOptionC"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginBottom="10dp"
+                                            android:background="@drawable/round_bg_light_primary"
+                                            android:gravity="center"
+                                            android:minHeight="45dp"
+                                            android:orientation="horizontal">
+
+                                            <LinearLayout
+                                                android:layout_width="0dp"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight="0.15"
+                                                android:gravity="center"
+                                                android:orientation="horizontal">
+
+                                                <TextView
+                                                    android:id="@+id/txtC"
+                                                    android:layout_width="30dp"
+                                                    android:layout_height="30dp"
+                                                    android:fontFamily="@font/public_medium"
+                                                    android:gravity="center"
+                                                    android:background="@drawable/cq"
+                                                    android:textColor="@color/text_color_primary"
+                                                    android:textSize="@dimen/default_text_13" />
+
+                                            </LinearLayout>
+
+                                            <LinearLayout
+                                                android:layout_width="0dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight="0.65"
+                                                android:orientation="horizontal">
+
+                                                <TextView
+                                                    android:id="@+id/txtOptionC"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginTop="3dp"
+                                                    android:layout_marginBottom="3dp"
+                                                    android:fontFamily="@font/public_medium"
+                                                    android:gravity="center_vertical"
+                                                    android:textColor="@color/text_color_primary"
+                                                    android:textSize="@dimen/default_text_15" />
+
+                                            </LinearLayout>
+
+                                            <LinearLayout
+                                                android:layout_width="0dp"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight="0.2"
+                                                android:gravity="center"
+                                                android:orientation="horizontal">
+
+                                                <TextView
+                                                    android:id="@+id/txtTickC"
+                                                    android:layout_width="20dp"
+                                                    android:layout_height="20dp"
+                                                    android:background="@drawable/round_bor_options" />
+
+                                            </LinearLayout>
+
+                                        </LinearLayout>
+
+                                        <!--Option D-->
+                                        <LinearLayout
+                                            android:id="@+id/lyOptionD"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginBottom="10dp"
+                                            android:background="@drawable/round_bg_light_primary"
+                                            android:gravity="center"
+                                            android:minHeight="45dp"
+                                            android:orientation="horizontal">
+
+                                            <LinearLayout
+                                                android:layout_width="0dp"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight="0.15"
+                                                android:gravity="center"
+                                                android:orientation="horizontal">
+
+                                                <TextView
+                                                    android:id="@+id/txtD"
+                                                    android:layout_width="30dp"
+                                                    android:layout_height="30dp"
+                                                    android:fontFamily="@font/public_medium"
+                                                    android:gravity="center"
+                                                    android:background="@drawable/dq"
+                                                    android:textColor="@color/text_color_primary"
+                                                    android:textSize="@dimen/default_text_13" />
+
+                                            </LinearLayout>
+
+                                            <LinearLayout
+                                                android:layout_width="0dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight="0.65"
+                                                android:orientation="horizontal">
+
+                                                <TextView
+                                                    android:id="@+id/txtOptionD"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginTop="3dp"
+                                                    android:layout_marginBottom="3dp"
+                                                    android:fontFamily="@font/public_medium"
+                                                    android:gravity="center_vertical"
+                                                    android:textColor="@color/text_color_primary"
+                                                    android:textSize="@dimen/default_text_15" />
+
+                                            </LinearLayout>
+
+                                            <LinearLayout
+                                                android:layout_width="0dp"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight="0.2"
+                                                android:gravity="center"
+                                                android:orientation="horizontal">
+
+                                                <TextView
+                                                    android:id="@+id/txtTickD"
+                                                    android:layout_width="20dp"
+                                                    android:layout_height="20dp"
+                                                    android:background="@drawable/round_bor_options" />
+
+                                            </LinearLayout>
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+                                    <!--Answer & Next buttons-->
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="10dp"
+                                        android:orientation="horizontal">
+
+                                        <!--Answer it-->
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="50dp"
+                                            android:layout_weight="1.9"
+                                            android:gravity="center"
+                                            android:orientation="horizontal">
+
+                                            <TextView
+                                                android:id="@+id/txtAnswerit"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:layout_marginEnd="5dp"
+                                                android:background="@drawable/answer_it_gradient_bg"
+                                                android:fontFamily="@font/public_medium"
+                                                android:gravity="center"
+                                                android:text="@string/answer_it"
+                                                android:textColor="@color/white"
+                                                android:textSize="16dp"
+                                                android:theme="@style/AppTheme.MyRipple" />
+
+                                        </LinearLayout>
+
+                                        <!--Next-->
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="50dp"
+                                            android:layout_weight="1"
+                                            android:gravity="center"
+                                            android:orientation="horizontal">
+
+                                            <TextView
+                                                android:id="@+id/txtNext"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:layout_marginStart="5dp"
+                                                android:background="@drawable/rounded_gradient_bg5"
+                                                android:fontFamily="@font/public_medium"
+                                                android:gravity="center"
+                                                android:text="@string/next"
+                                                android:textColor="@color/white"
+                                                android:textSize="16dp"
+                                                android:theme="@style/AppTheme.MyRipple" />
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="80dp"
+                                        android:layout_marginTop="30dp"
+                                        android:gravity="center"
+                                        android:layout_marginBottom="30dp"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:id="@+id/txtQueNumber"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:gravity="right"
+                                            android:fontFamily="@font/held_ftv_black"
+                                            android:layout_weight="1"
+                                            android:textColor="@color/blue"
+                                            android:textSize="33dp" />
+
+                                        <TextView
+                                            android:id="@+id/txtTotalQue"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/held_ftv_black"
+                                            android:gravity="left"
+                                            android:textColor="#9F66EC"
+                                            android:textSize="33dp" />
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <!--Level number-->
+                            <LinearLayout
+                                android:layout_width="70dp"
+                                android:layout_height="230dp"
+                                android:layout_above="@+id/card_bottom"
+                                android:layout_centerInParent="true"
+                                android:layout_marginBottom="-135dp"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="65dp"
+                                    android:layout_height="230dp"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <cn.iwgang.countdownview.CountdownView
+                                        android:id="@+id/countdown_timer"
+                                        style="@style/timer_text"
+                                        android:layout_width="80dp"
+                                        android:layout_height="25dp"
+                                        android:layout_marginTop="50dp"
+                                        android:background="@drawable/round_bg_primary"
+                                        app:isHideTimeBackground="true"
+                                        app:isShowDay="false"
+                                        app:isShowHour="false"
+                                        app:isShowMillisecond="false"
+                                        app:isShowMinute="true"
+                                        app:isShowSecond="true"
+                                        app:suffixTextColor="#631ED5"
+                                        app:timeTextColor="#600BC6"
+                                        app:timeTextSize="19dp" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/level"
+                                        android:gravity="center"
+                                        android:textStyle="bold"
+                                        android:textSize="14dp"/>
+
+                                    <TextView
+                                        android:id="@+id/txtLevelNumber"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="-15dp"
+                                        android:fontFamily="@font/public_bold"
+                                        android:textColor="@color/colorAccent"
+                                        android:textSize="34dp" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+
+        </LinearLayout>
+
+        <!--Message Bottom-->
+        <LinearLayout
+            android:id="@+id/lyBottom"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtAnswerStatus"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/public_medium"
+                android:gravity="center"
+                android:textColor="@color/text_blue"
+                android:textSize="@dimen/default_text_15"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

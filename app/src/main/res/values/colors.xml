@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFA613</color>
+    <color name="colorPrimaryDark">#DC9300</color>
+    <color name="colorAccent">#fdc401</color>
+
+    <color name="pink">#ff02b3</color>
+    <color name="blue">#8342ed</color>
+    <color name="heading_color">#353160</color>
+    <color name="text_color_primary">#3e3969</color>
+    <color name="text_color_darkGray">#505763</color>
+    <color name="text_gray">#808080</color>
+    <color name="text_pink">#B132F6</color>
+    <color name="text_white">#000000</color>
+    <color name="text_blue">#340D5A</color>
+
+    <color name="green">#5fc73b</color>
+    <color name="white">#ffffff</color>
+    <color name="white_25">#fffafa</color>
+
+    <color name="sky_blue">#cfebfd</color>
+    <color name="light_colorPrimary">#eaeaea</color>
+    <color name="extraLight_colorPrimary">#dfdbe5</color>
+    <color name="show_more">#505662</color>
+    <color name="extraDarkGray">#565656</color>
+    <color name="darkGray">#6f7982</color>
+    <color name="Gray">#808080</color>
+    <color name="lightGray">#d3d3d3</color>
+    <color name="extraLightGray">#f5f5f5</color>
+    <color name="slateGray">#9eaab6</color>
+
+    <color name="text_black">#080808</color>
+    <color name="black">#000000</color>
+    <color name="lightBlack">#222</color>
+
+    <color name="Red">#FF0000</color>
+    <color name="maroon">#800000</color>
+
+    <color name="border">#f1f5f7</color>
+
+    <color name="gMail">#cf4332</color>
+    <color name="placeholder_bg">#dddddd</color>
+</resources>

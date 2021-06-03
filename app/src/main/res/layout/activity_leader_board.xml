@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:shimmer="http://schemas.android.com/tools"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".Activity.LeaderBoard">
+
+    <!--Shimmer-->
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+        shimmer:duration="800">
+
+        <!-- Adding 3 rows of placeholders -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/shim_leaderboard" />
+
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <!--Main Content-->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/lyUserPos"
+        android:background="@drawable/foreg"
+        android:layout_marginBottom="2dp"
+        android:fillViewport="true"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--Top 3-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="351dp"
+                android:orientation="vertical"
+                android:background="@drawable/rounded_gradient_bg3"
+                android:visibility="visible">
+
+                <!--Toolbar-->
+                <include layout="@layout/toolbar" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginBottom="40dp"
+                    android:layout_marginEnd="20dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <!--Top 3 Contestant-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="274dp"
+
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:visibility="visible">
+
+                        <!--2nd-->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.6"
+                            android:gravity="bottom|center"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <com.makeramen.roundedimageview.RoundedImageView
+                                    android:id="@+id/rivSecond"
+                                    android:layout_width="75dp"
+                                    android:layout_height="75dp"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/ic_username"
+                                    app:riv_border_color="@color/text_pink"
+                                    app:riv_border_width="5dp"
+                                    app:riv_oval="true" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="80dp"
+                                android:layout_height="60dp"
+                                android:layout_marginTop="8dp"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/txt_2nd"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="35dp"
+                                    android:layout_centerInParent="true"
+                                    android:fontFamily="@font/held_ftv_black"
+                                    android:gravity="center"
+                                    android:text="2"
+                                    android:textColor="@color/white"
+                                    android:textSize="30dp" />
+
+                                <TextView
+                                    android:id="@+id/txtPointsSecond"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="25dp"
+                                    android:fontFamily="@font/public_bold"
+                                    android:gravity="center"
+                                    android:textColor="@color/colorAccent"
+                                    android:textSize="16dp" />
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <!--1st-->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="300dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_weight="1"
+                            android:gravity="bottom|center"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="12dp">
+
+                                    <TextView
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:layout_alignParentEnd="true"
+                                        android:layout_marginTop="54dp"
+                                        android:layout_marginEnd="8dp"
+                                        android:background="@drawable/star"
+                                        android:elevation="30dp"
+                                        android:rotation="0"
+                                        android:visibility="visible" />
+
+                                    <com.makeramen.roundedimageview.RoundedImageView
+                                        android:id="@+id/rivFirst"
+                                        android:layout_width="150dp"
+                                        android:layout_height="150dp"
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_marginTop="79dp"
+                                        android:scaleType="fitXY"
+                                        android:src="@drawable/ic_username"
+                                        app:riv_border_color="@color/text_pink"
+                                        app:riv_border_width="14dp"
+                                        app:riv_oval="true" />
+
+                                </RelativeLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:layout_marginTop="8dp"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/txt_1st"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/held_ftv_black"
+                                    android:gravity="center"
+                                    android:text="1"
+                                    android:textColor="@color/white"
+                                    android:textSize="40dp" />
+
+                                <TextView
+                                    android:id="@+id/txtPointsFirst"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="25dp"
+                                    android:layout_marginBottom="23dp"
+                                    android:fontFamily="@font/public_medium"
+                                    android:gravity="center"
+                                    android:textColor="@color/colorAccent"
+                                    android:textSize="16dp" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <!--3rd-->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.6"
+                            android:gravity="bottom|center"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <com.makeramen.roundedimageview.RoundedImageView
+                                    android:id="@+id/rivThird"
+                                    android:layout_width="75dp"
+                                    android:layout_height="75dp"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/ic_username"
+                                    app:riv_border_color="@color/text_pink"
+                                    app:riv_border_width="5dp"
+                                    app:riv_oval="true" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="80dp"
+                                android:layout_height="60dp"
+                                android:layout_marginTop="8dp"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/txt_3rd"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="35dp"
+                                    android:fontFamily="@font/held_ftv_black"
+                                    android:gravity="center"
+                                    android:text="3"
+                                    android:textColor="@color/white"
+                                    android:textSize="30dp" />
+
+                                <TextView
+                                    android:id="@+id/txtPointsThird"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="25dp"
+                                    android:fontFamily="@font/held_ftv_black"
+                                    android:gravity="center"
+                                    android:text="3445"
+                                    android:textColor="@color/colorAccent"
+                                    android:textSize="16dp" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!--Name of Top 3-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:visibility="visible">
+
+                        <!--2nd-->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/txtSecondName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/held_half"
+                                android:gravity="center"
+                                android:textColor="@color/white"
+                                android:textSize="16dp" />
+
+                        </LinearLayout>
+
+                        <!--1st-->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.3"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/txtFirstName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:fontFamily="@font/held_regular"
+                                android:gravity="center"
+                                android:textColor="@color/white"
+                                android:textSize="16dp" />
+
+                        </LinearLayout>
+
+                        <!--3rd-->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/txtThirdName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/held_regular"
+                                android:gravity="center"
+                                android:text="marcede"
+                                android:textColor="@color/white"
+                                android:textSize="16dp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Template View for native ads -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical">
+
+                <!--  This is your template view -->
+                <com.google.android.ads.nativetemplates.TemplateView
+                    android:id="@+id/nativeTemplate"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    app:gnt_template_type="@layout/gnt_small_template_view" />
+
+            </LinearLayout>
+
+            <!--RecyclerView-->
+            <LinearLayout
+                android:id="@+id/lyRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvTopContestant"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:nestedScrollingEnabled="false"
+                    app:fastScrollEnabled="false" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

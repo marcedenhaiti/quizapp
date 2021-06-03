@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "510196953221",
+    "project_id": "jenihaiti-a74de",
+    "storage_bucket": "jenihaiti-a74de.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:510196953221:android:7fcd5129f414168181b9ec",
+        "android_client_info": {
+          "package_name": "com.jenihaiti.com"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "510196953221-e80ojmrb2eficl8h9ee4mnqcom5lsd7o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD3KLnU5iJfUQ6J6en2CXMuCH1B91RRHSg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "510196953221-e80ojmrb2eficl8h9ee4mnqcom5lsd7o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

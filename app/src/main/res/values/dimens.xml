@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="dots_height">30dp</dimen>
+    <dimen name="dots_margin_bottom">20dp</dimen>
+    <dimen name="img_width_height">120dp</dimen>
+    <dimen name="slide_title">25sp</dimen>
+    <dimen name="slide_desc">20sp</dimen>
+    <dimen name="card_title">15dp</dimen>
+    <dimen name="desc_padding">40dp</dimen>
+    <dimen name="label_title">16dp</dimen>
+
+    <dimen name="corner_shape_dimens">140</dimen>
+    <dimen name="splash_app_name">30dp</dimen>
+    <dimen name="main_ly_start_margin">12dp</dimen>
+    <dimen name="main_ly_end_margin">8dp</dimen>
+    <dimen name="viewAll">12dp</dimen>
+    <dimen name="name_home">12dp</dimen>
+    <dimen name="extra_small">10dp</dimen>
+    <dimen name="skip">15dp</dimen>
+    <dimen name="toolbar">18dp</dimen>
+    <dimen name="inner_toolbar">17dp</dimen>
+    <dimen name="video_desc">13dp</dimen>
+    <dimen name="final_price">16dp</dimen>
+    <dimen name="default_price">10dp</dimen>
+
+    <!--Course Detail dimens-->
+    <dimen name="cd_main_title">22dp</dimen>
+    <dimen name="cd_course_desc">14dp</dimen>
+    <dimen name="cd_topic">17dp</dimen>
+    <dimen name="cd_show_more_less">14dp</dimen>
+    <dimen name="cd_card_inner_margin">10dp</dimen>
+    <dimen name="cd_card_radius">8dp</dimen>
+    <dimen name="cd_card_elevation">5dp</dimen>
+    <dimen name="cd_price">23dp</dimen>
+    <dimen name="cd_footer_price">20dp</dimen>
+    <dimen name="cd_offer">17dp</dimen>
+    <dimen name="cart_price">20dp</dimen>
+    <dimen name="cd_by_now">16dp</dimen>
+
+
+    <dimen name="text_16">16dp</dimen>
+    <dimen name="text_17">17dp</dimen>
+    <dimen name="text_18">18dp</dimen>
+    <dimen name="text_20">20dp</dimen>
+    <dimen name="text_22">22dp</dimen>
+    <dimen name="text_23">23dp</dimen>
+    <dimen name="text_24">24dp</dimen>
+    <dimen name="text_26">26dp</dimen>
+    <dimen name="text_28">28dp</dimen>
+    <dimen name="text_30">30dp</dimen>
+    <dimen name="text_10">10dp</dimen>
+    <dimen name="text_12">12dp</dimen>
+    <dimen name="default_text_13">13dp</dimen>
+    <dimen name="default_texts">14dp</dimen>
+    <dimen name="default_text_15">15dp</dimen>
+
+    <!--ProfileActivity dimens-->
+    <dimen name="pa_digits">16dp</dimen>
+    <dimen name="pa_topic">25dp</dimen>
+    <dimen name="pa_read_more_less">16dp</dimen>
+    <dimen name="pa_logo_height_width">32dp</dimen>
+
+    <!--Login, Registration & Mobile Verification-->
+    <dimen name="lrm_main_title">23dp</dimen>
+    <dimen name="lrm_email_pass_no">14dp</dimen>
+    <dimen name="lrm_email_pass_title">15dp</dimen>
+    <dimen name="lrm_button_text">18dp</dimen>
+    <dimen name="lrm_otp_title">20dp</dimen>
+
+    <!--Login, Registration & Mobile Verification-->
+    <dimen name="pay_toolbar">18dp</dimen>
+    <dimen name="pay_topic">17dp</dimen>
+    <dimen name="pay_card_radius">8dp</dimen>
+    <dimen name="pay_card_elevation">5dp</dimen>
+    <dimen name="pay_sub_topic">16dp</dimen>
+    <dimen name="pay_card_margin_start_end">8dp</dimen>
+
+    <dimen name="activity_padding">12dp</dimen>
+    <dimen name="placeholder_image">50dp</dimen>
+    <dimen name="placeholder_text_height">8dp</dimen>
+    <dimen name="activity_padding_horizontal">16dp</dimen>
+    <dimen name="padding_10">10dp</dimen>
+    <dimen name="name">15dp</dimen>
+    <dimen name="chef">12dp</dimen>
+    <dimen name="timestamp">11dp</dimen>
+    <dimen name="description">15dp</dimen>
+    <dimen name="price">13dp</dimen>
+</resources>

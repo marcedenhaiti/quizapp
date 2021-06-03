@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/lyContestant"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <!--Winning status-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.12"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtWinningStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/public_medium"
+                    android:gravity="center_vertical"
+                    android:text="Win"
+                    android:textColor="@color/text_blue"
+                    android:textSize="@dimen/default_texts" />
+
+            </LinearLayout>
+
+            <!--Contestant Image-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.15"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/rivContestant"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_margin="3dp"
+                    android:scaleType="fitXY"
+                    app:riv_border_color="@color/blue"
+                    app:riv_border_width="2dp"
+                    app:riv_oval="true" />
+
+            </LinearLayout>
+
+            <!--Topic Name-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.53"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtTopicName"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/public_medium"
+                    android:gravity="center_vertical"
+                    android:text="Javascript"
+                    android:textColor="@color/text_gray"
+                    android:textSize="@dimen/default_texts" />
+
+            </LinearLayout>
+
+            <!--Total points-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="0.2"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtPoints"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="@color/colorPrimary"
+                    android:fontFamily="@font/public_medium"
+                    android:gravity="center"
+                    android:text="+20 P"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/default_texts" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/colorPrimaryDark" />
+
+    </LinearLayout>
+</LinearLayout>

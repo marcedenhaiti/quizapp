@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".Activity.Settings">
+
+    <!--Toolbar-->
+    <include layout="@layout/toolbar" />
+
+    <!--Shimmer-->
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:shimmer_duration="1200">
+
+        <!-- Adding 3 rows of placeholders -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/shim_settings" />
+
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="97dp"
+                android:layout_height="97dp"
+                android:layout_margin="20dp"
+                app:srcCompat="@drawable/app_icon2" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:backgroundTint="@color/extraLightGray"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                    <!--About-->
+                    <LinearLayout
+                        android:id="@+id/lyAbout"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.9">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/public_medium"
+                                android:gravity="center_vertical"
+                                android:text="@string/about_app"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/default_texts" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.1"
+                            android:gravity="center|end">
+
+                            <TextView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:background="@drawable/ic_dropdown"
+                                android:gravity="center_vertical"
+                                android:rotation="-90" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/lightGray" />
+
+                    <!--Term & Conditions-->
+                    <LinearLayout
+                        android:id="@+id/lyTermCondition"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.9">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/public_medium"
+                                android:gravity="center_vertical"
+                                android:text="@string/Privacy_policy"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/default_texts" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.1"
+                            android:gravity="center|end">
+
+                            <TextView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:background="@drawable/ic_dropdown"
+                                android:gravity="center_vertical"
+                                android:rotation="-90" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/lightGray" />
+
+                    <!--Enable Sound-->
+                    <LinearLayout
+                        android:id="@+id/ly_app_sound"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.83">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/public_medium"
+                                android:gravity="center_vertical"
+                                android:text="@string/Enable_Sound"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/default_texts" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.17"
+                            android:gravity="center|end">
+
+                            <androidx.appcompat.widget.SwitchCompat
+                                android:id="@+id/switchSound"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:checked="true"
+                                android:theme="@style/SCBSwitch" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/lightGray" />
+
+                    <!--Enable vibration-->
+                    <LinearLayout
+                        android:id="@+id/ly_vibration"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.83">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/public_medium"
+                                android:gravity="center_vertical"
+                                android:text="@string/Enable_Vibration"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/default_texts" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.17"
+                            android:gravity="center|end">
+
+                            <androidx.appcompat.widget.SwitchCompat
+                                android:id="@+id/switchVibration"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:checked="false"
+                                android:theme="@style/SCBSwitch" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/lightGray" />
+
+                    <!--Login / Logout-->
+                    <LinearLayout
+                        android:id="@+id/lyLogin"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.9">
+
+                            <TextView
+                                android:id="@+id/txtLogin"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/public_medium"
+                                android:gravity="center_vertical"
+                                android:text="@string/login"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/default_texts" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.1"
+                            android:gravity="center|end">
+
+                            <TextView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:background="@drawable/ic_dropdown"
+                                android:gravity="center_vertical"
+                                android:rotation="-90" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Template View for native ad -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <!--  This is your template view -->
+                <com.google.android.ads.nativetemplates.TemplateView
+                    android:id="@+id/nativeTemplate"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:gnt_template_type="@layout/gnt_medium_template_view" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

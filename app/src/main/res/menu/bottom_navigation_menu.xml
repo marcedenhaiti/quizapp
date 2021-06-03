@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/navigation_Featured"
+        android:icon="@drawable/ic_featured"
+        android:title="@string/featured_nav" />
+    <item
+        android:id="@+id/navigation_Search"
+        android:icon="@drawable/ic_search"
+        android:title="@string/search_nav" />
+    <item
+        android:id="@+id/navigation_MyCourses"
+        android:icon="@drawable/ic_mycourses"
+        android:title="@string/my_courses_nav" />
+    <item
+        android:id="@+id/navigation_Wishlist"
+        android:icon="@drawable/ic_wishlist"
+        android:title="@string/wishlist_nav" />
+    <item
+        android:id="@+id/navigation_Account"
+        android:icon="@drawable/ic_account"
+        android:title="@string/account_nav" />
+</menu>
